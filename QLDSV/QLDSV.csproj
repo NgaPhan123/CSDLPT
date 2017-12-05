@@ -110,6 +110,12 @@
     <Compile Include="frmDSSinhVien.Designer.cs">
       <DependentUpon>frmDSSinhVien.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmPhieuDiem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPhieuDiem.Designer.cs">
+      <DependentUpon>frmPhieuDiem.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="QLDSV_DSPM.Designer.cs">
@@ -127,6 +133,12 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>rptDSSV.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptPhieuDiem.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptPhieuDiem.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <EmbeddedResource Include="frmBangDiemMonHoc.resx">
@@ -147,6 +159,9 @@
     <EmbeddedResource Include="frmDSSinhVien.resx">
       <DependentUpon>frmDSSinhVien.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmPhieuDiem.resx">
+      <DependentUpon>frmPhieuDiem.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -165,6 +180,10 @@
     <EmbeddedResource Include="rptDSSV.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>rptDSSV.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptPhieuDiem.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptPhieuDiem.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="app.config" />
     <None Include="DS.xsc">

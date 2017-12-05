@@ -112,3 +112,4 @@ D:\fr_QLDSV\QLDSV\QLDSV\obj\Debug\QLDSV.exe
 D:\fr_QLDSV\QLDSV\QLDSV\obj\Debug\QLDSV.pdb
 D:\fr_QLDSV\QLDSV\QLDSV\obj\Debug\QLDSV.frmDSSinhVien.resources
 D:\fr_QLDSV\QLDSV\QLDSV\obj\Debug\QLDSV.frmBangDiemMonHoc.resources
+D:\fr_QLDSV\QLDSV\QLDSV\obj\Debug\QLDSV.frmPhieuDiem.resources

@@ -39,9 +39,9 @@ namespace QLDSV
             cmbKhoa.SelectedIndex = Program.mChinhanh;
 
             if (Program.mGroup == "PGV")
-                cmbTenLop.Enabled = true;
+                cmbKhoa.Enabled = true;
             else
-                cmbTenLop.Enabled = false;
+                cmbKhoa.Enabled = false;
         }
 
         private void cmbKhoa_SelectedIndexChanged_1(object sender, EventArgs e)
