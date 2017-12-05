@@ -179,7 +179,6 @@
             this.cmbLan.Name = "cmbLan";
             this.cmbLan.Size = new System.Drawing.Size(121, 21);
             this.cmbLan.TabIndex = 10;
-            this.cmbLan.ValueMember = "LAN";
             // 
             // dIEMBindingSource
             // 
@@ -233,6 +232,7 @@
             // tableAdapterManager
             // 
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.DIEM1TableAdapter = null;
             this.tableAdapterManager.DIEMTableAdapter = this.DIEMTableAdapter;
             this.tableAdapterManager.GIAOVIENTableAdapter = null;
             this.tableAdapterManager.KHOATableAdapter = null;
