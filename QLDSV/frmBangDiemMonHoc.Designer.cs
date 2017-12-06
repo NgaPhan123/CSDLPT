@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.Label lANLabel;
             System.Windows.Forms.Label tENMHLabel;
             System.Windows.Forms.Label tENLOPLabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmBangDiemMonHoc));
@@ -40,15 +39,12 @@
             this.dS = new QLDSV.DS();
             this.cmbTenMH = new System.Windows.Forms.ComboBox();
             this.mONHOCBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.cmbLan = new System.Windows.Forms.ComboBox();
-            this.dIEMBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.btnThoat = new System.Windows.Forms.Button();
             this.btnMayIn = new System.Windows.Forms.Button();
             this.btnPreview = new System.Windows.Forms.Button();
             this.crptView = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
             this.LOPTableAdapter = new QLDSV.DSTableAdapters.LOPTableAdapter();
             this.tableAdapterManager = new QLDSV.DSTableAdapters.TableAdapterManager();
-            this.DIEMTableAdapter = new QLDSV.DSTableAdapters.DIEMTableAdapter();
             this.MONHOCTableAdapter = new QLDSV.DSTableAdapters.MONHOCTableAdapter();
             this.lOPBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
@@ -63,26 +59,17 @@
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.lOPBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
-            lANLabel = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtLan = new System.Windows.Forms.TextBox();
             tENMHLabel = new System.Windows.Forms.Label();
             tENLOPLabel = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.lOPBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dS)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mONHOCBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dIEMBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lOPBindingNavigator)).BeginInit();
             this.lOPBindingNavigator.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // lANLabel
-            // 
-            lANLabel.AutoSize = true;
-            lANLabel.Location = new System.Drawing.Point(466, 123);
-            lANLabel.Name = "lANLabel";
-            lANLabel.Size = new System.Drawing.Size(30, 13);
-            lANLabel.TabIndex = 9;
-            lANLabel.Text = "LẦN:";
             // 
             // tENMHLabel
             // 
@@ -114,12 +101,12 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.txtLan);
+            this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(tENLOPLabel);
             this.panel1.Controls.Add(this.cmbTenLop);
             this.panel1.Controls.Add(tENMHLabel);
             this.panel1.Controls.Add(this.cmbTenMH);
-            this.panel1.Controls.Add(lANLabel);
-            this.panel1.Controls.Add(this.cmbLan);
             this.panel1.Controls.Add(this.btnThoat);
             this.panel1.Controls.Add(this.btnMayIn);
             this.panel1.Controls.Add(this.btnPreview);
@@ -169,22 +156,6 @@
             this.mONHOCBindingSource.DataMember = "MONHOC";
             this.mONHOCBindingSource.DataSource = this.dS;
             // 
-            // cmbLan
-            // 
-            this.cmbLan.DataSource = this.dIEMBindingSource;
-            this.cmbLan.DisplayMember = "LAN";
-            this.cmbLan.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbLan.FormattingEnabled = true;
-            this.cmbLan.Location = new System.Drawing.Point(521, 118);
-            this.cmbLan.Name = "cmbLan";
-            this.cmbLan.Size = new System.Drawing.Size(121, 21);
-            this.cmbLan.TabIndex = 10;
-            // 
-            // dIEMBindingSource
-            // 
-            this.dIEMBindingSource.DataMember = "DIEM";
-            this.dIEMBindingSource.DataSource = this.dS;
-            // 
             // btnThoat
             // 
             this.btnThoat.Location = new System.Drawing.Point(495, 159);
@@ -233,7 +204,6 @@
             // 
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
             this.tableAdapterManager.DIEM1TableAdapter = null;
-            this.tableAdapterManager.DIEMTableAdapter = this.DIEMTableAdapter;
             this.tableAdapterManager.GIAOVIENTableAdapter = null;
             this.tableAdapterManager.KHOATableAdapter = null;
             this.tableAdapterManager.LOP1TableAdapter = null;
@@ -241,10 +211,6 @@
             this.tableAdapterManager.MONHOCTableAdapter = this.MONHOCTableAdapter;
             this.tableAdapterManager.SINHVIENTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = QLDSV.DSTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            // 
-            // DIEMTableAdapter
-            // 
-            this.DIEMTableAdapter.ClearBeforeFill = true;
             // 
             // MONHOCTableAdapter
             // 
@@ -374,6 +340,22 @@
             this.lOPBindingNavigatorSaveItem.Text = "Save Data";
             this.lOPBindingNavigatorSaveItem.Click += new System.EventHandler(this.lOPBindingNavigatorSaveItem_Click);
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(450, 128);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(41, 13);
+            this.label2.TabIndex = 13;
+            this.label2.Text = "Lần Thi";
+            // 
+            // txtLan
+            // 
+            this.txtLan.Location = new System.Drawing.Point(497, 123);
+            this.txtLan.Name = "txtLan";
+            this.txtLan.Size = new System.Drawing.Size(100, 21);
+            this.txtLan.TabIndex = 14;
+            // 
             // frmBangDiemMonHoc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -391,7 +373,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.lOPBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dS)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mONHOCBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dIEMBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lOPBindingNavigator)).EndInit();
             this.lOPBindingNavigator.ResumeLayout(false);
             this.lOPBindingNavigator.PerformLayout();
@@ -423,13 +404,12 @@
         private System.Windows.Forms.ToolStripButton lOPBindingNavigatorSaveItem;
         private DSTableAdapters.MONHOCTableAdapter MONHOCTableAdapter;
         private System.Windows.Forms.BindingSource mONHOCBindingSource;
-        private DSTableAdapters.DIEMTableAdapter DIEMTableAdapter;
-        private System.Windows.Forms.BindingSource dIEMBindingSource;
         private System.Windows.Forms.Button btnThoat;
         private System.Windows.Forms.Button btnMayIn;
         private System.Windows.Forms.Button btnPreview;
         private System.Windows.Forms.ComboBox cmbTenLop;
         private System.Windows.Forms.ComboBox cmbTenMH;
-        private System.Windows.Forms.ComboBox cmbLan;
+        private System.Windows.Forms.TextBox txtLan;
+        private System.Windows.Forms.Label label2;
     }
 }

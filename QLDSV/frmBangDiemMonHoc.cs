@@ -28,7 +28,6 @@ namespace QLDSV
 
         private void frmBangDiemMonHoc_Load(object sender, EventArgs e)
         {
-           
             dS.EnforceConstraints = false;
             // TODO: This line of code loads data into the 'dS.LOP' table. You can move, or remove it, as needed.
             this.LOPTableAdapter.Connection.ConnectionString = Program.connstr;
@@ -38,17 +37,12 @@ namespace QLDSV
             this.MONHOCTableAdapter.Connection.ConnectionString = Program.connstr;
             this.MONHOCTableAdapter.Fill(this.dS.MONHOC);
 
-
-            // TODO: This line of code loads data into the 'dS.LOP' table. You can move, or remove it, as needed.
-            this.DIEMTableAdapter.Connection.ConnectionString = Program.connstr;
-            this.DIEMTableAdapter.Fill(this.dS.DIEM);
-
         }
       
         private void btnPreview_Click(object sender, EventArgs e)
         {
             DataTable dt = new DataTable();
-            String strLenh = "EXEC SP_InBangDiemMonHoc N'" + cmbTenMH.SelectedValue + "', N'" + cmbTenLop.SelectedValue + "', N'" + cmbLan.Text.Trim()+ "'";
+            String strLenh = "EXEC SP_InBangDiemMonHoc N'" + cmbTenMH.SelectedValue + "', N'" + cmbTenLop.SelectedValue + "', N'" + txtLan.Text.Trim()+ "'";
             //MessageBox.Show(strLenh);
             dt = Program.ExecSqlDataTable(strLenh);
             rptBangDiemTheoMonHoc rp = new rptBangDiemTheoMonHoc();
@@ -56,7 +50,7 @@ namespace QLDSV
             rp.SetDataSource(dt);
             rp.SetParameterValue("LOP", cmbTenLop.Text);
             rp.SetParameterValue("MONHOC", cmbTenMH.Text);
-            rp.SetParameterValue("LAN", cmbLan.Text);
+            rp.SetParameterValue("LAN", txtLan.Text);
             crptView.ReportSource = rp;
         }
       
