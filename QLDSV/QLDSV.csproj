@@ -80,6 +80,12 @@
     <Compile Include="frmBangDiemMonHoc.Designer.cs">
       <DependentUpon>frmBangDiemMonHoc.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmBangDiemTongKet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBangDiemTongKet.Designer.cs">
+      <DependentUpon>frmBangDiemTongKet.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmDangNhap.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -129,6 +135,12 @@
       <DependentUpon>rptBangDiemTheoMonHoc.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="rptBangDiemTongKet.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptBangDiemTongKet.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="rptDSSV.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -143,6 +155,9 @@
     </Compile>
     <EmbeddedResource Include="frmBangDiemMonHoc.resx">
       <DependentUpon>frmBangDiemMonHoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBangDiemTongKet.resx">
+      <DependentUpon>frmBangDiemTongKet.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmDangNhap.resx">
       <DependentUpon>frmDangNhap.cs</DependentUpon>
@@ -176,6 +191,10 @@
     <EmbeddedResource Include="rptBangDiemTheoMonHoc.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>rptBangDiemTheoMonHoc.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptBangDiemTongKet.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptBangDiemTongKet.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="rptDSSV.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>

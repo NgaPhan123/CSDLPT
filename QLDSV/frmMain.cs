@@ -44,19 +44,7 @@ namespace QLDSV
             Close();
         }
 
-        private void toolStripStatusLabel1_Click(object sender, EventArgs e)
-        {
-
-        }
-       
-        private void btnLop_ItemClick(object sender, ItemClickEventArgs e)
-        {
-        }
-
-        private void barButtonItem2_ItemClick(object sender, ItemClickEventArgs e)
-        {
-        }
-
+      
         private void btnDanhMucLop_ItemClick(object sender, ItemClickEventArgs e)
         {
             Form frm = this.CheckExists(typeof(frmDanhMucLop));
@@ -121,5 +109,32 @@ namespace QLDSV
                 f.Show();
             }
         }
+
+        private void btnBangDiemTongKet_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            
+            Form frm = this.CheckExists(typeof(frmBangDiemTongKet));
+            if (frm != null) frm.Activate();
+            else
+            {
+                frmBangDiemTongKet f = new frmBangDiemTongKet();
+                f.MdiParent = this;
+                f.Show();
+            }
+        }
+        private void toolStripStatusLabel1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnLop_ItemClick(object sender, ItemClickEventArgs e)
+        {
+        }
+
+        private void barButtonItem2_ItemClick(object sender, ItemClickEventArgs e)
+        {
+        }
+
+        
     }
 }

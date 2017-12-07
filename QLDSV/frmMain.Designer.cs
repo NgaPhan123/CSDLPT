@@ -58,6 +58,8 @@
             this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
             this.HOTEN = new System.Windows.Forms.ToolStripStatusLabel();
             this.KHOA = new System.Windows.Forms.ToolStripStatusLabel();
+            this.ribbonPageGroup8 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.btnBangDiemTongKet = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).BeginInit();
             this.statusStrip1.SuspendLayout();
@@ -78,9 +80,10 @@
             this.btnThiHetMon,
             this.btnBangDiemMonHoc,
             this.btnDanhMucLop,
-            this.btnPhieuDiem});
+            this.btnPhieuDiem,
+            this.btnBangDiemTongKet});
             this.ribbon.Location = new System.Drawing.Point(0, 0);
-            this.ribbon.MaxItemId = 15;
+            this.ribbon.MaxItemId = 16;
             this.ribbon.Name = "ribbon";
             this.ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1,
@@ -216,7 +219,8 @@
             this.ribbonPageGroup5,
             this.ribbonPageGroup3,
             this.ribbonPageGroup4,
-            this.ribbonPageGroup7});
+            this.ribbonPageGroup7,
+            this.ribbonPageGroup8});
             this.ribbonPage3.Name = "ribbonPage3";
             this.ribbonPage3.Text = "Báo cáo";
             // 
@@ -293,6 +297,20 @@
             this.KHOA.Size = new System.Drawing.Size(34, 17);
             this.KHOA.Text = "Khoa";
             // 
+            // ribbonPageGroup8
+            // 
+            this.ribbonPageGroup8.ItemLinks.Add(this.btnBangDiemTongKet);
+            this.ribbonPageGroup8.Name = "ribbonPageGroup8";
+            this.ribbonPageGroup8.Text = "ribbonPageGroup8";
+            // 
+            // btnBangDiemTongKet
+            // 
+            this.btnBangDiemTongKet.Caption = "Bảng Điểm Tổng Kết";
+            this.btnBangDiemTongKet.Id = 15;
+            this.btnBangDiemTongKet.ImageOptions.Image = global::QLDSV.Properties.Resources.Excel_24_icon;
+            this.btnBangDiemTongKet.Name = "btnBangDiemTongKet";
+            this.btnBangDiemTongKet.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnBangDiemTongKet_ItemClick);
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -347,5 +365,7 @@
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup6;
         private DevExpress.XtraBars.BarButtonItem btnPhieuDiem;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup7;
+        private DevExpress.XtraBars.BarButtonItem btnBangDiemTongKet;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup8;
     }
 }
