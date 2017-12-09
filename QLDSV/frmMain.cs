@@ -135,6 +135,16 @@ namespace QLDSV
         {
         }
 
-        
+        private void btnTaoTaiKhoan_ItemClick_1(object sender, ItemClickEventArgs e)
+        {
+            Form frm = this.CheckExists(typeof(frmTaoTaiKhoan));
+            if (frm != null) frm.Activate();
+            else
+            {
+                frmTaoTaiKhoan f = new frmTaoTaiKhoan();
+                f.MdiParent = this;
+                f.Show();
+            }
+        }
     }
 }

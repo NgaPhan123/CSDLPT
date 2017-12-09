@@ -29,17 +29,7 @@ namespace QLDSV
             InitializeComponent();
         }
 
-        private String convertStringToUTF8(String s)
-        {
-            var dbEnc = Encoding.UTF8;
-            var uniEnc = Encoding.Unicode;
-            byte[] dbByte = dbEnc.GetBytes(s);
-            byte[] uniBytes = Encoding.Convert(dbEnc, uniEnc, dbByte);
-
-            return uniEnc.GetString(uniBytes);
-        }
-
-
+ 
         private void updateUIButtonPhucHoi()
         {
             if (st.Count == 0)
@@ -305,7 +295,7 @@ namespace QLDSV
             Program.sqlcmd = Program.conn.CreateCommand();
             Program.sqlcmd.CommandType = CommandType.StoredProcedure;
             Program.sqlcmd.CommandText = strLenhKiemTraSVLop;
-            Program.sqlcmd.Parameters.Add("@maLop", SqlDbType.Text).Value = convertStringToUTF8(txtMaLop.Text.Trim());
+            Program.sqlcmd.Parameters.Add("@maLop", SqlDbType.Text).Value = (txtMaLop.Text.Trim());
             Program.sqlcmd.Parameters.Add("@Ret", SqlDbType.Int).Direction = ParameterDirection.ReturnValue;
             Program.sqlcmd.ExecuteNonQuery();
             Program.conn.Close();
@@ -356,8 +346,8 @@ namespace QLDSV
             if (btnHieuChinh.Enabled == false || btnThem.Enabled == false)
             {
                 bdsDsLop.CancelEdit();
-
-                if (btnThem.Enabled == false) bdsDsLop.Position = vitri;
+                if (btnThem.Enabled == false)
+                bdsDsLop.Position = vitri;
                 gcLop.Enabled = true;
                 groupBox1.Enabled = false;
                 btnThem.Enabled = btnHieuChinh.Enabled = btnXoa.Enabled = btnReload.Enabled = btnExit.Enabled = true;

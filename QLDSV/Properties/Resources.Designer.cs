@@ -143,9 +143,29 @@ namespace QLDSV.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Excel_48_icon {
+            get {
+                object obj = ResourceManager.GetObject("Excel-48-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Exit_24_icon {
             get {
                 object obj = ResourceManager.GetObject("Exit-24-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Keyboard_48_icon {
+            get {
+                object obj = ResourceManager.GetObject("Keyboard-48-icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -186,6 +206,16 @@ namespace QLDSV.Properties {
         internal static System.Drawing.Bitmap Science_Classroom_24_icon {
             get {
                 object obj = ResourceManager.GetObject("Science-Classroom-24-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Teacher_male_icon_48 {
+            get {
+                object obj = ResourceManager.GetObject("Teacher-male-icon-48", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

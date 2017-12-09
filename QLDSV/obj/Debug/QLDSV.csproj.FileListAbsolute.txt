@@ -114,3 +114,4 @@ D:\fr_QLDSV\QLDSV\QLDSV\obj\Debug\QLDSV.csproj.GenerateResource.Cache
 D:\fr_QLDSV\QLDSV\QLDSV\obj\Debug\QLDSV.exe.licenses
 D:\fr_QLDSV\QLDSV\QLDSV\obj\Debug\QLDSV.exe
 D:\fr_QLDSV\QLDSV\QLDSV\obj\Debug\QLDSV.pdb
+D:\fr_QLDSV\QLDSV\QLDSV\obj\Debug\QLDSV.frmTaoTaiKhoan.resources

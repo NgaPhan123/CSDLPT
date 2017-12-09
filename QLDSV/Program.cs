@@ -32,7 +32,7 @@ namespace QLDSV
         public static String mGroup = string.Empty;
         public static String mHoten = string.Empty;
         public static int mChinhanh = 0;
-        public static BindingSource bds_dspm = new BindingSource();
+        public static BindingSource bds_dspm = new BindingSource(); //giu DSPM khi dang nhap
         public static frmMain fr_Main;
 
         public static int KetNoi()
